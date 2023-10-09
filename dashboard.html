@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css"
+        integrity="sha256-VJuwjrIWHWsPSEvQV4DiPfnZi7axOaiWwKfXaJnR5tA=" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+
+
+<body>
+
+    
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Class Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="time" class="form-control" id="classTime" placeholder="Class Time">
+                    </div>
+                    <div style="margin: 20px 0;">
+                        <input type="text" class="form-control" id="schedule" placeholder="Schedule">
+                    </div>
+                    <div style="margin: 20px 0;">
+                        <input type="text" class="form-control" id="teacher" placeholder="Teacher">
+                    </div>
+                    <div style="margin: 20px 0;">
+                        <input type="text" class="form-control" id="section" placeholder="Section">
+                    </div>
+                    <div style="margin: 20px 0;">
+                        <input type="text" class="form-control" id="course" placeholder="Course">
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" id="batch" placeholder="Batch">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submit-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="students.html">Students</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="margin: 20px;">
+
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add Class
+            </button>
+        </div>
+
+        <h3>Class Details</h3>
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Time</th>
+                    <th>Schedule</th>
+                    <th>Teacher</th>
+                    <th>Section</th>
+                    <th>Course</th>
+                    <th>Batch</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+               
+                
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"
+        integrity="sha256-S/HO+Ru8zrLDmcjzwxjl18BQYDCvFDD7mPrwJclX6U8=" crossorigin="anonymous"></script>
+    <script type="module" src="app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore.js"></script> -->
+
+</body>
+
+</html>

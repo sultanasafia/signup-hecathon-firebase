@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIREBASE-HECATHON-Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #dfe4ea;">
+    <!-- header -->
+    <header>
+        <h3>Personal Blogging App</h3>
+        <a href="login.html"><button class="button active" type="submit">Login</button></a>
+    </header>
+    <!-- #titleSignUp -->
+    <div id="titleSignUp">
+        <h1 id="greeting"></h1>
+    </div>
+
+
+
+
+    <h1>Attendance System &#128517;</h1>
+
+    <label for="classSelect">Select Class:</label>
+    <select id="classSelect1">
+        <!-- Add class options dynamically here -->
+    </select>
+
+    <h2>ID Card &#127937;</h2>
+    <div id="idCard">
+        <!-- ID card UI will be displayed here -->
+    </div>
+
+    <label for="rollNumber">Enter Roll Number:</label>
+    <input type="text" id="rollNumber"><br>
+    <label for="attendanceStatus">Select Status:</label>
+    <select id="attendanceStatus">
+        <option value="Present">Present</option>
+        <option value="Absent">Absent</option>
+        <option value="Late">Late</option>
+        <option value="Leave">Leave</option>
+    </select><br>
+    <button id="markAttendance">Mark Attendance</button>
+
+    <br>
+    <h2>ID Card</h2>
+    <div id="idCard">
+        <!-- ID card UI will be displayed here -->
+    </div>
+
+    <label for="rollNumber">Enter Roll Number:</label>
+    <input type="text" id="rollNumber"><br>
+    <label for="attendanceStatus">Select Status:</label>
+    <select id="attendanceStatus">
+        <option value="Present">Present</option>
+        <option value="Absent">Absent</option>
+        <option value="Late">Late</option>
+        <option value="Leave">Leave</option>
+    </select><br>
+    <button id="markAttendance">Mark Attendance</button>
+
+    <!-- <h2>Student Details</h2>
+    <div id="studentDetails">
+         Student details will be displayed here -->
+    <!-- </div> --> 
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="app.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+<script>
+    // Select the h1 element by its id
+    let heading = document.getElementById('greeting');
+
+    // Call the getGreeting() function and set its result as the content of the h1 element
+    heading.innerHTML = `${getGreeting()}`;
+
+    function getGreeting() {
+        const currentTime = new Date();
+        const currentHour = currentTime.getHours();
+// console.log(currentTime);
+        let greeting;
+
+        if (currentHour < 12) {
+            greeting = 'Good Morning Readers!';
+        } else if (currentHour < 18) {
+            greeting = 'Good Afternoon Readers!';
+        } else {
+            greeting = 'Good Evening Readers!';
+        }
+
+        return greeting;
+    }
+
+    // Additional code to set the greeting
+    const greeting = getGreeting();
+    day.innerText = greeting + " !";
+</script>
+</html>
